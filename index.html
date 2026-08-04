@@ -29,6 +29,7 @@
   --muted:#5A6B7C;
   --line:#E3E9F0;
   --soft:#F4F7FA;
+  --ease:cubic-bezier(.22,1,.36,1);   /* 부드럽게 감속 */
   --max:1120px;
   --r:14px;
   --head:74px;
@@ -56,11 +57,12 @@ header.scrolled{box-shadow:0 6px 24px rgba(11,37,69,.08)}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--navy);font-size:18px;letter-spacing:-.4px;white-space:nowrap}
 .logo .mark{height:38px;width:auto;flex:none}
 .logo small{display:block;font-size:10.5px;font-weight:600;color:var(--muted);letter-spacing:1.1px}
-nav.tabs{display:flex;gap:2px}
+nav.tabs{display:flex;gap:2px;position:relative}
+nav.tabs .ink{position:absolute;bottom:2px;height:3px;border-radius:2px;background:var(--gold);opacity:0;pointer-events:none;transition:left .34s var(--ease),width .34s var(--ease),opacity .2s ease}
 nav.tabs a{position:relative;padding:10px 13px;font-size:15.5px;font-weight:600;color:#33465C;border-radius:8px;transition:.2s;white-space:nowrap}
 nav.tabs a:hover{color:var(--navy);background:var(--soft)}
 nav.tabs a.active{color:var(--navy);font-weight:800}
-nav.tabs a.active::after{content:"";position:absolute;left:13px;right:13px;bottom:2px;height:3px;border-radius:2px;background:var(--gold)}
+
 .hd-cta{display:flex;align-items:center;gap:12px}
 .hd-tel{font-size:16px;font-weight:800;color:var(--navy);line-height:1.25;text-align:right;white-space:nowrap}
 .hd-tel span{display:block;font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.5px}
@@ -127,8 +129,8 @@ section.sec.soft{background:var(--soft);border-top:1px solid var(--line);border-
 
 /* ---------- 왜 DH인가 (8가지) ---------- */
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.why-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;transition:.25s}
-.why-item:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(11,37,69,.10);border-color:#CBD9E7}
+.why-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;transition:transform .4s var(--ease),box-shadow .4s ease,border-color .3s ease}
+.why-item:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(11,37,69,.13);border-color:#CBD9E7}
 .why-no{
   display:inline-grid;place-items:center;width:34px;height:34px;border-radius:9px;
   background:var(--navy);color:#fff;font-family:Georgia,serif;font-size:15px;font-weight:700;margin-bottom:16px;
@@ -138,9 +140,9 @@ section.sec.soft{background:var(--soft);border-top:1px solid var(--line);border-
 
 /* ---------- 주요 업무 ---------- */
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.svc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:34px 28px;transition:.25s;position:relative;overflow:hidden}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:34px 28px;transition:transform .4s var(--ease),box-shadow .4s ease,border-color .3s ease;position:relative;overflow:hidden}
 .svc::after{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--navy);transform:scaleX(0);transform-origin:left;transition:.3s}
-.svc:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(11,37,69,.10);border-color:#CBD9E7}
+.svc:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(11,37,69,.13);border-color:#CBD9E7}
 .svc:hover::after{transform:scaleX(1)}
 .svc .ico{width:52px;height:52px;border-radius:13px;background:#EAF1F8;color:var(--navy);display:grid;place-items:center;margin-bottom:20px}
 .svc h4{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:14px}
@@ -159,8 +161,8 @@ section.sec.soft{background:var(--soft);border-top:1px solid var(--line);border-
 
 /* ---------- 해결 사례 ---------- */
 .cases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.case{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.25s}
-.case:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(11,37,69,.10)}
+.case{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s ease,border-color .3s ease}
+.case:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(11,37,69,.13)}
 .case .body{padding:28px}
 .case .tag{display:inline-block;font-size:12.5px;font-weight:700;color:var(--accent);background:#EAF2F9;padding:5px 12px;border-radius:999px;margin-bottom:14px}
 .case h4{font-size:18px;color:var(--navy);font-weight:800;margin-bottom:10px;line-height:1.5}
@@ -187,7 +189,7 @@ section.sec.soft{background:var(--soft);border-top:1px solid var(--line);border-
 .contact .sec-label{color:#D8C79B}
 .contact .sec-head p{color:#B9CBDD}
 .ct-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.ct{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--r);padding:30px 22px;text-align:center;transition:.25s;display:block}
+.ct{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--r);padding:30px 22px;text-align:center;transition:transform .4s var(--ease),background .3s ease,border-color .3s ease;display:block}
 .ct:hover{background:rgba(255,255,255,.13);transform:translateY(-3px);border-color:rgba(216,199,155,.5)}
 .ct .ico{width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;margin:0 auto 16px}
 .ct span{display:block;font-size:13.5px;color:#A9BDD1;letter-spacing:.6px;margin-bottom:6px}
@@ -250,6 +252,14 @@ section.sec.dark .sec-head p{color:#B9CBDD}
 }
 .faq details[open] summary::after{transform:rotate(-135deg) translate(-3px,-3px)}
 .faq .a{padding:0 26px 24px;font-size:16px;color:#4A5A6B;line-height:1.78}
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.faq details[open] .a{animation:faqIn .3s var(--ease)}
+/* 높이까지 부드럽게 (지원 브라우저 한정, 미지원은 위 페이드로 대체) */
+@supports (interpolate-size:allow-keywords){
+  :root{interpolate-size:allow-keywords}
+  .faq details::details-content{height:0;overflow:hidden;transition:height .32s var(--ease),content-visibility .32s allow-discrete;transition-behavior:allow-discrete}
+  .faq details[open]::details-content{height:auto}
+}
 
 /* 문의 섹션 긴급성 안내 */
 .urgent{
@@ -262,7 +272,9 @@ section.sec.dark .sec-head p{color:#B9CBDD}
 /* ---------- 등장 애니메이션 ---------- */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}
+  nav.tabs .ink,.faq details[open] .a{transition:none;animation:none}
+  .faq details::details-content{transition:none}}
 
 /* ---------- 반응형 ---------- */
 @media (max-width:1360px){
@@ -280,7 +292,7 @@ section.sec.dark .sec-head p{color:#B9CBDD}
   .burger{display:block}
   nav.tabs.open{display:flex;flex-direction:column;position:absolute;top:var(--head);left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:10px 16px 18px;gap:2px;box-shadow:0 12px 30px rgba(11,37,69,.10)}
   nav.tabs.open a{padding:15px 12px;font-size:17px;border-bottom:1px solid var(--line);border-radius:0}
-  nav.tabs.open a.active::after{display:none}
+  nav.tabs .ink{display:none}
   .hero{padding:72px 0 76px}
   section.sec,.contact{padding:72px 0}
   .about{grid-template-columns:1fr;gap:34px}
@@ -312,6 +324,7 @@ section.sec.dark .sec-head p{color:#B9CBDD}
     </a>
 
     <nav class="tabs" id="tabs">
+      <span class="ink" id="ink"></span>
       <a href="#about">인사말</a>
       <a href="#why">왜 DH인가</a>
       <a href="#service">주요 업무</a>
@@ -868,8 +881,19 @@ function onScroll() {
   var cur = -1;
   secs.forEach(function (s, i) { if (s && s.offsetTop <= y) cur = i; });
   links.forEach(function (a, i) { a.classList.toggle('active', i === cur); });
+  moveInk(links[cur]);
+}
+
+// 상단 탭 밑줄을 활성 탭 위치로 이동
+var ink = document.getElementById('ink');
+function moveInk(el) {
+  if (!el || getComputedStyle(ink).display === 'none') { ink.style.opacity = 0; return; }
+  ink.style.left = (el.offsetLeft + 13) + 'px';
+  ink.style.width = Math.max(0, el.offsetWidth - 26) + 'px';
+  ink.style.opacity = 1;
 }
 addEventListener('scroll', onScroll, { passive: true });
+addEventListener('resize', onScroll);
 onScroll();
 
 // 모바일 메뉴
