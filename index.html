@@ -165,6 +165,8 @@ section.sec.soft{background:var(--soft);border-top:1px solid var(--line);border-
 .case .tag{display:inline-block;font-size:12.5px;font-weight:700;color:var(--accent);background:#EAF2F9;padding:5px 12px;border-radius:999px;margin-bottom:14px}
 .case h4{font-size:18px;color:var(--navy);font-weight:800;margin-bottom:10px;line-height:1.5}
 .case p{font-size:15px;color:var(--muted)}
+.case p b{color:var(--navy);font-weight:700}
+.case .meta b{color:var(--navy)}
 .case .meta{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:13.5px;color:#7C8B9A}
 
 /* ---------- 사무소 둘러보기 ---------- */
@@ -314,7 +316,7 @@ section.sec.dark .sec-head p{color:#B9CBDD}
       <a href="#why">왜 DH인가</a>
       <a href="#service">주요 업무</a>
       <a href="#process">업무 절차</a>
-      <a href="#case">해결 사례</a>
+      <a href="#case">의뢰 유형</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">상담 문의</a>
     </nav>
@@ -364,7 +366,9 @@ section.sec.dark .sec-head p{color:#B9CBDD}
     <ul class="signal reveal">
       <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg></span>배우자의 귀가 시간이 갑자기 불규칙해졌습니다.</li>
       <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg></span>휴대폰을 엎어 두거나, 들고 화장실에 갑니다.</li>
+      <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg></span>통화·메시지 기록이 자주 지워져 있습니다.</li>
       <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg></span>몇 년째 연락이 닿지 않는 가족이 있습니다.</li>
+      <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg></span>돈을 빌려주거나 계약한 뒤, 상대가 사라졌습니다.</li>
       <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg></span>회사 돈이 비는데, 누구인지 알 수 없습니다.</li>
       <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg></span>누군가 나를 지켜보고 있는 것 같습니다.</li>
     </ul>
@@ -657,37 +661,68 @@ section.sec.dark .sec-head p{color:#B9CBDD}
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-label">CASE</span>
-      <h2>해결 사례</h2>
-      <p>의뢰인 보호를 위해 모든 사례는 각색·비식별 처리했습니다.</p>
+      <h2>가장 많이 접수되는 의뢰</h2>
+      <p>의뢰인 보호를 위해 개별 사건의 내용은 공개하지 않습니다.<br />
+        대신 어떤 상황에서 무엇을 확인해 드리는지, 유형으로 정리했습니다.</p>
       <div class="bar"></div>
     </div>
 
     <div class="cases">
       <div class="case reveal">
         <div class="body">
-          <span class="tag">사람찾기</span>
-          <h4>오랜 기간 연락이 끊겼던 가족의 소재를 확인한 사례</h4>
-          <p>[사례 내용 자리 — 의뢰 상황 / 진행 과정 / 결과 3줄 정도로 정리합니다.]</p>
-          <div class="meta">소요 기간 [○일] · 지역 [○○]</div>
+          <span class="tag">가정 문제 · 배우자 부정행위</span>
+          <h4>“요즘 배우자가 예전 같지 않습니다”</h4>
+          <p>귀가 시간이 불규칙해지고, 휴대폰을 엎어 두고, 통화 기록이 지워져 있습니다. 의심만으로는 아무것도 달라지지 않습니다. <b>소송에서 실제로 쓸 수 있는 형태</b>의 객관적 자료를 확보해 드립니다.</p>
+          <div class="meta"><b>받으시는 것</b> &nbsp;시간·장소가 특정된 사진·영상, 이동 동선 보고서</div>
         </div>
       </div>
       <div class="case reveal">
         <div class="body">
-          <span class="tag">배우자 부정행위</span>
-          <h4>소송에서 활용 가능한 객관적 증거를 확보한 사례</h4>
-          <p>[사례 내용 자리]</p>
-          <div class="meta">소요 기간 [○일] · 지역 [○○]</div>
+          <span class="tag">사람찾기 · 연락두절</span>
+          <h4>“몇 년째 연락이 닿지 않습니다”</h4>
+          <p>오래 헤어진 가족, 은인, 소식이 끊긴 지인. 이름과 대략의 정보만 있어도 시작할 수 있습니다. 확인이 어려운 사안이면 <b>착수 전에 솔직하게 말씀드립니다.</b></p>
+          <div class="meta"><b>받으시는 것</b> &nbsp;현재 소재·생활권 확인, 접촉 가능 여부 판단</div>
         </div>
       </div>
       <div class="case reveal">
         <div class="body">
-          <span class="tag">[분류]</span>
-          <h4>[사례 제목 자리]</h4>
-          <p>[사례 내용 자리]</p>
-          <div class="meta">소요 기간 [○일] · 지역 [○○]</div>
+          <span class="tag">재산 조사 · 채권 추적</span>
+          <h4>“돈을 빌려주고 연락이 끊겼습니다”</h4>
+          <p>판결문을 받아도 상대의 재산을 찾지 못하면 집행할 수 없습니다. 채무자의 현재 소재와 실제 생활 수준, <b>명의를 옮겨 둔 재산의 단서</b>를 확인합니다.</p>
+          <div class="meta"><b>받으시는 것</b> &nbsp;소재 확인, 강제집행에 활용 가능한 자료</div>
+        </div>
+      </div>
+      <div class="case reveal">
+        <div class="body">
+          <span class="tag">사기 피해 · 신원 특정</span>
+          <h4>“계약하고 나니 연락이 되지 않습니다”</h4>
+          <p>전세·투자·중고 거래·온라인 사기. 고소를 하려 해도 <b>상대가 누구인지 특정되지 않으면</b> 절차 자체가 진행되지 않습니다. 신원과 소재를 먼저 확인합니다.</p>
+          <div class="meta"><b>받으시는 것</b> &nbsp;상대방 신원·소재 확인, 고소장에 첨부 가능한 자료</div>
+        </div>
+      </div>
+      <div class="case reveal">
+        <div class="body">
+          <span class="tag">기업 문제 · 내부 조사</span>
+          <h4>“회사 돈이 비는데, 누구인지 알 수 없습니다”</h4>
+          <p>공금 횡령, 기밀 유출, 납품 비리. 내부 감사만으로는 확인이 어렵고, 잘못 건드리면 <b>증거가 먼저 사라집니다.</b> 조용히, 흔적을 남기지 않고 확인합니다.</p>
+          <div class="meta"><b>받으시는 것</b> &nbsp;사실관계 정리, 징계·형사 절차에 쓸 수 있는 자료</div>
+        </div>
+      </div>
+      <div class="case reveal">
+        <div class="body">
+          <span class="tag">장비 탐지 · 스토킹 대응</span>
+          <h4>“누군가 나를 보고 있는 것 같습니다”</h4>
+          <p>자택·사무실·차량에 설치된 도청기, 몰래카메라, 위치추적기를 전문 장비로 탐지합니다. 이혼·분쟁 중이거나 스토킹이 의심된다면 <b>가장 먼저 확인해야 할 부분</b>입니다.</p>
+          <div class="meta"><b>받으시는 것</b> &nbsp;탐지 결과 보고, 발견 시 제거 및 증거 보전</div>
         </div>
       </div>
     </div>
+
+    <div class="mid-cta reveal">
+      <p>내 상황이 위에 없어도 괜찮습니다. <span class="hl">먼저 물어보시는 것이 순서입니다.</span></p>
+      <a href="tel:01086650531" class="btn btn-navy">대표자에게 바로 물어보기</a>
+    </div>
+    <!-- TODO: 대표님 실제 해결 사례 3건 도착하면 이 아래에 별도 블록 추가 -->
   </div>
 </section>
 
@@ -716,6 +751,11 @@ section.sec.dark .sec-head p{color:#B9CBDD}
       <details>
         <summary>조사가 불법은 아닌가요?</summary>
         <div class="a">법이 허용하는 범위 안에서만 진행합니다. 법적으로 불가능한 의뢰라면 상담 단계에서 솔직하게 말씀드립니다.</div>
+      </details>
+
+      <details>
+        <summary>제가 직접 모은 자료도 증거가 되나요?</summary>
+        <div class="a">되는 것과 안 되는 것이 나뉩니다. 카드 결제 내역, 차량 블랙박스, 내비게이션 기록처럼 <span class="hl">본인이 정당하게 접근할 수 있는 자료</span>는 활용 가능성이 높습니다. 반대로 배우자의 휴대폰을 몰래 보거나 위치추적기를 붙여 얻은 자료는 소송에서 배척될 뿐 아니라, <span class="hl">본인이 처벌 대상이 될 수 있습니다.</span> 이미 가지고 계신 자료가 있다면 상담 때 먼저 정리해 드립니다.</div>
       </details>
 
       <details>
