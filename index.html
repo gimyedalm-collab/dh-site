@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DH 탐정사무소 — 당신의 실낱같은 희망이 되겠습니다</title>
+<meta name="description" content="DH 탐정사무소 — 사람찾기 및 사실관계파악, 증거확보 전문. 정식 사업자 등록, 즉시 보고의 원칙, 조사 자료 100% 폐기. 전국 대표번호 1544-9895." />
+
+<!-- TODO(자료 도착 후 교체): 로고 / 사업자등록증 / 탐정사 자격 / 대표자 사진 / 사무실 AI 사진 4장 / 해결 사례 3건 / 사업자 정보 / 카톡 오픈채팅 링크 -->
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="DH 탐정사무소" />
+<meta property="og:title" content="DH 탐정사무소 — 당신의 실낱같은 희망이 되겠습니다" />
+<meta property="og:description" content="사람찾기 및 사실관계파악 | 증거확보 전문. 전국 대표번호 1544-9895" />
+<meta property="og:locale" content="ko_KR" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230B2545'/><text x='50' y='68' font-family='Georgia,serif' font-size='46' font-weight='700' fill='%23ffffff' text-anchor='middle' letter-spacing='1'>DH</text></svg>" />
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
+
+<style>
+:root{
+  --navy:#0B2545;      /* 메인 남색 */
+  --navy-700:#13355C;
+  --accent:#1B6CA8;    /* 본문 중요 문구 강조색 */
+  --gold:#C2A15B;      /* 아주 얇게만 쓰는 포인트 */
+  --ink:#12181F;
+  --muted:#5A6B7C;
+  --line:#E3E9F0;
+  --soft:#F4F7FA;
+  --max:1120px;
+  --r:14px;
+  --head:74px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--head)}
+body{
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  color:var(--ink);background:#fff;line-height:1.7;
+  -webkit-font-smoothing:antialiased;word-break:keep-all;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.hl{color:var(--accent);font-weight:700}
+
+/* ---------- 헤더 / 상단 탭 ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;height:var(--head);
+  background:rgba(255,255,255,.93);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);transition:box-shadow .25s;
+}
+header.scrolled{box-shadow:0 6px 24px rgba(11,37,69,.08)}
+.hd{height:var(--head);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--navy);font-size:18px;letter-spacing:-.4px;white-space:nowrap}
+.logo .mark{width:38px;height:38px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:Georgia,serif;font-size:17px;letter-spacing:.5px;flex:none}
+.logo small{display:block;font-size:10.5px;font-weight:600;color:var(--muted);letter-spacing:1.1px}
+nav.tabs{display:flex;gap:2px}
+nav.tabs a{position:relative;padding:10px 13px;font-size:15.5px;font-weight:600;color:#33465C;border-radius:8px;transition:.2s;white-space:nowrap}
+nav.tabs a:hover{color:var(--navy);background:var(--soft)}
+nav.tabs a.active{color:var(--navy);font-weight:800}
+nav.tabs a.active::after{content:"";position:absolute;left:13px;right:13px;bottom:2px;height:3px;border-radius:2px;background:var(--gold)}
+.hd-cta{display:flex;align-items:center;gap:12px}
+.hd-tel{font-size:16px;font-weight:800;color:var(--navy);line-height:1.25;text-align:right;white-space:nowrap}
+.hd-tel span{display:block;font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:10px;font-weight:700;font-size:15px;border:1px solid transparent;transition:.2s;cursor:pointer;white-space:nowrap}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-700);transform:translateY(-1px)}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{transform:translateY(-1px)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.42)}
+.btn-ghost:hover{background:rgba(255,255,255,.22)}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;flex:none}
+.burger i{display:block;width:18px;height:2px;background:var(--navy);margin:4px auto;border-radius:2px}
+
+/* ---------- 히어로 ---------- */
+.hero{
+  position:relative;margin-top:var(--head);padding:112px 0 92px;color:#fff;overflow:hidden;
+  background:
+    radial-gradient(900px 420px at 78% 8%, rgba(46,105,168,.55), transparent 60%),
+    radial-gradient(700px 500px at 5% 95%, rgba(194,161,91,.16), transparent 60%),
+    linear-gradient(160deg,#0B2545 0%,#102F55 55%,#0A1E39 100%);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;opacity:.26;
+  background-image:radial-gradient(rgba(255,255,255,.18) 1px, transparent 1px);
+  background-size:26px 26px;
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 72%);
+  mask-image:linear-gradient(180deg,#000,transparent 72%);
+}
+.hero .wrap{position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;letter-spacing:.8px;color:#D8C79B;border:1px solid rgba(216,199,155,.4);border-radius:999px;padding:7px 18px;margin-bottom:26px}
+.hero h1{font-size:clamp(29px,4.8vw,50px);line-height:1.34;font-weight:800;letter-spacing:-1px}
+.hero h1 em{font-style:normal;color:#8FC4EE}
+.hero .sub{margin-top:22px;font-size:clamp(16px,2vw,19px);color:#C7D6E6;max-width:640px}
+.hero .sub b{color:#fff}
+.hero-cta{display:flex;gap:12px;margin-top:38px;flex-wrap:wrap}
+.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:52px;padding-top:32px;border-top:1px solid rgba(255,255,255,.14)}
+.trust div{display:flex;align-items:center;gap:9px;font-size:15px;color:#DCE7F2;font-weight:600}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+
+/* ---------- 섹션 공통 ---------- */
+section.sec{padding:100px 0}
+section.sec.soft{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{text-align:center;margin-bottom:56px}
+.sec-label{display:inline-block;font-size:13px;font-weight:800;letter-spacing:2.4px;color:var(--accent);margin-bottom:14px}
+.sec-head h2{font-size:clamp(26px,3.6vw,38px);font-weight:800;color:var(--navy);letter-spacing:-.8px;line-height:1.35}
+.sec-head p{margin-top:16px;color:var(--muted);font-size:17px}
+.sec-head .bar{width:44px;height:3px;background:var(--gold);border-radius:2px;margin:22px auto 0}
+
+/* ---------- 인사말 ---------- */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.card-photo{border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(11,37,69,.14)}
+.about h3{font-size:clamp(20px,2.5vw,26px);color:var(--navy);font-weight:800;line-height:1.55;margin-bottom:24px;letter-spacing:-.5px}
+.about p{color:#3E4C5C;font-size:16.5px;margin-bottom:18px}
+.quote{
+  border-left:3px solid var(--gold);background:var(--soft);border-radius:0 10px 10px 0;
+  padding:20px 24px;margin:24px 0;font-size:17px;color:var(--navy);font-weight:700;line-height:1.65;
+}
+.sign{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+.sign b{display:block;font-size:18px;color:var(--navy);margin-top:4px}
+.facts{display:grid;gap:12px;margin-top:20px}
+.fact{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;text-align:center}
+.fact b{display:block;font-size:17px;color:var(--navy);font-weight:800}
+.fact span{font-size:13.5px;color:var(--muted)}
+
+/* ---------- 왜 DH인가 (8가지) ---------- */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.why-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;transition:.25s}
+.why-item:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(11,37,69,.10);border-color:#CBD9E7}
+.why-no{
+  display:inline-grid;place-items:center;width:34px;height:34px;border-radius:9px;
+  background:var(--navy);color:#fff;font-family:Georgia,serif;font-size:15px;font-weight:700;margin-bottom:16px;
+}
+.why-item h4{font-size:17.5px;font-weight:800;color:var(--navy);margin-bottom:10px;line-height:1.45}
+.why-item p{font-size:15px;color:var(--muted);line-height:1.65}
+
+/* ---------- 주요 업무 ---------- */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:34px 28px;transition:.25s;position:relative;overflow:hidden}
+.svc::after{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--navy);transform:scaleX(0);transform-origin:left;transition:.3s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(11,37,69,.10);border-color:#CBD9E7}
+.svc:hover::after{transform:scaleX(1)}
+.svc .ico{width:52px;height:52px;border-radius:13px;background:#EAF1F8;color:var(--navy);display:grid;place-items:center;margin-bottom:20px}
+.svc h4{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:14px}
+.svc ul{list-style:none}
+.svc li{font-size:15px;color:#4A5A6B;padding-left:15px;position:relative;margin-bottom:7px;line-height:1.6}
+.svc li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--gold)}
+
+/* ---------- 업무 절차 ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;position:relative}
+.step .no{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;font-size:16px;display:grid;place-items:center;margin-bottom:16px;font-family:Georgia,serif}
+.step h4{font-size:17.5px;color:var(--navy);font-weight:800;margin-bottom:8px}
+.step p{font-size:15px;color:var(--muted);line-height:1.65}
+.step.final{border-color:var(--gold);background:#FDFBF6}
+.step.final .no{background:var(--gold)}
+
+/* ---------- 해결 사례 ---------- */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.case{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.25s}
+.case:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(11,37,69,.10)}
+.case .body{padding:28px}
+.case .tag{display:inline-block;font-size:12.5px;font-weight:700;color:var(--accent);background:#EAF2F9;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+.case h4{font-size:18px;color:var(--navy);font-weight:800;margin-bottom:10px;line-height:1.5}
+.case p{font-size:15px;color:var(--muted)}
+.case .meta{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:13.5px;color:#7C8B9A}
+
+/* ---------- 사무소 둘러보기 ---------- */
+.office{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.office figure{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.office figcaption{padding:13px 16px;font-size:14.5px;font-weight:700;color:var(--navy);text-align:center}
+
+/* 사진 도착 전 임시 자리 */
+.ph{aspect-ratio:4/3;display:grid;place-items:center;align-content:center;gap:6px;text-align:center;
+  background:repeating-linear-gradient(45deg,#F1F5F9,#F1F5F9 12px,#E8EEF4 12px,#E8EEF4 24px);
+  color:#8698A9;font-size:13px;font-weight:600}
+.ph b{display:block;color:var(--navy);font-size:15px}
+.ph.tall{aspect-ratio:3/4}
+
+/* ---------- 문의 ---------- */
+.contact{background:var(--navy);color:#fff;padding:100px 0}
+.contact .sec-head h2{color:#fff}
+.contact .sec-label{color:#D8C79B}
+.contact .sec-head p{color:#B9CBDD}
+.ct-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ct{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--r);padding:30px 22px;text-align:center;transition:.25s;display:block}
+.ct:hover{background:rgba(255,255,255,.13);transform:translateY(-3px);border-color:rgba(216,199,155,.5)}
+.ct .ico{width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;margin:0 auto 16px}
+.ct span{display:block;font-size:13.5px;color:#A9BDD1;letter-spacing:.6px;margin-bottom:6px}
+.ct b{font-size:19px;font-weight:800;letter-spacing:-.3px}
+.ct em{display:block;font-style:normal;font-size:13px;color:#8FA6BC;margin-top:8px}
+.notice{margin-top:36px;text-align:center;font-size:15px;color:#C7D6E6}
+.notice b{color:#fff}
+
+footer{background:#081C34;color:#8FA6BC;padding:44px 0;font-size:14px}
+.ft{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.ft b{color:#DCE7F2;display:block;margin-bottom:10px;font-size:15px}
+.ft p{margin:3px 0}
+
+/* ---------- 모바일 하단 고정 바 ---------- */
+.mobar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:120;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 20px rgba(11,37,69,.12)}
+.mobar a{flex:1;padding:11px 4px;text-align:center;font-size:13px;font-weight:700;color:var(--navy)}
+.mobar a+a{border-left:1px solid var(--line)}
+.mobar a.main{background:var(--navy);color:#fff}
+.mobar .ico{display:flex;justify-content:center;margin-bottom:3px}
+
+/* ---------- 이런 상황이신가요 (체크리스트) ---------- */
+.signal{max-width:780px;margin:0 auto;list-style:none}
+.signal li{
+  display:flex;gap:15px;align-items:flex-start;background:#fff;border:1px solid var(--line);
+  border-radius:12px;padding:19px 24px;margin-bottom:12px;font-size:16.5px;color:#3E4C5C;transition:.2s;
+}
+.signal li:hover{border-color:#CBD9E7;box-shadow:0 8px 24px rgba(11,37,69,.07)}
+.signal .chk{width:23px;height:23px;border-radius:6px;border:1.8px solid #C4D2E0;flex:none;margin-top:2px;display:grid;place-items:center;color:var(--accent)}
+.mid-cta{text-align:center;margin-top:36px}
+.mid-cta p{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:20px;letter-spacing:-.4px}
+
+/* ---------- 어두운 강조 섹션 (하지 마세요) ---------- */
+section.sec.dark{background:var(--navy);color:#fff;border:0}
+section.sec.dark .sec-head h2{color:#fff}
+section.sec.dark .sec-label{color:#D8C79B}
+section.sec.dark .sec-head p{color:#B9CBDD}
+.warn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.warn-item{display:flex;gap:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--r);padding:26px 24px}
+.warn-x{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);display:grid;place-items:center;flex:none;font-size:15px;font-weight:700;margin-top:2px}
+.warn-item h4{font-size:17.5px;font-weight:800;margin-bottom:7px;line-height:1.45}
+.warn-item p{font-size:15px;color:#B9CBDD;line-height:1.65}
+.warn-cta{margin-top:38px;text-align:center}
+.warn-cta p{font-size:18px;color:#DCE7F2;margin-bottom:22px}
+.warn-cta b{color:#fff}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:840px;margin:0 auto}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px}
+.faq details[open]{border-color:#CBD9E7;box-shadow:0 8px 24px rgba(11,37,69,.06)}
+.faq summary{
+  list-style:none;cursor:pointer;padding:22px 26px;font-size:17.5px;font-weight:700;color:var(--navy);
+  display:flex;justify-content:space-between;align-items:center;gap:18px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";width:10px;height:10px;flex:none;border-right:2px solid #8698A9;border-bottom:2px solid #8698A9;
+  transform:rotate(45deg) translate(-3px,-3px);transition:transform .25s;
+}
+.faq details[open] summary::after{transform:rotate(-135deg) translate(-3px,-3px)}
+.faq .a{padding:0 26px 24px;font-size:16px;color:#4A5A6B;line-height:1.78}
+
+/* 문의 섹션 긴급성 안내 */
+.urgent{
+  max-width:740px;margin:0 auto 40px;text-align:center;padding:22px 28px;
+  border:1px solid rgba(216,199,155,.35);border-radius:12px;background:rgba(255,255,255,.05);
+  font-size:16px;color:#C7D6E6;line-height:1.7;
+}
+.urgent b{color:#fff}
+
+/* ---------- 등장 애니메이션 ---------- */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* ---------- 반응형 ---------- */
+@media (max-width:1360px){
+  .hd-tel{display:none}
+}
+@media (max-width:1100px){
+  .why{grid-template-columns:repeat(2,1fr)}
+  .warn-grid{grid-template-columns:1fr}
+  .office{grid-template-columns:repeat(2,1fr)}
+  .ct-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:1023px){
+  :root{--head:64px}
+  nav.tabs,.hd-cta .btn{display:none}
+  .burger{display:block}
+  nav.tabs.open{display:flex;flex-direction:column;position:absolute;top:var(--head);left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:10px 16px 18px;gap:2px;box-shadow:0 12px 30px rgba(11,37,69,.10)}
+  nav.tabs.open a{padding:15px 12px;font-size:17px;border-bottom:1px solid var(--line);border-radius:0}
+  nav.tabs.open a.active::after{display:none}
+  .hero{padding:72px 0 76px}
+  section.sec,.contact{padding:72px 0}
+  .about{grid-template-columns:1fr;gap:34px}
+  .about .col-photo{max-width:420px;margin:0 auto}
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .grid3,.cases{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  body{padding-bottom:64px}
+  .mobar{display:flex}
+}
+@media (max-width:640px){
+  .why{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .office{grid-template-columns:1fr}
+  .ct-grid{grid-template-columns:1fr}
+  .hero-cta .btn{flex:1;padding:13px 12px;font-size:14.5px;white-space:nowrap}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ 헤더 ============ -->
+<header id="hd">
+  <div class="wrap hd">
+    <a href="#top" class="logo">
+      <!-- TODO: 로고 파일 도착 후 <img src="images/logo.svg" alt="DH 탐정사무소" height="38"> 로 교체 -->
+      <span class="mark">DH</span>
+      <span>DH 탐정사무소<small>DH DETECTIVE AGENCY</small></span>
+    </a>
+
+    <nav class="tabs" id="tabs">
+      <a href="#about">인사말</a>
+      <a href="#why">왜 DH인가</a>
+      <a href="#service">주요 업무</a>
+      <a href="#process">업무 절차</a>
+      <a href="#case">해결 사례</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">상담 문의</a>
+    </nav>
+
+    <div class="hd-cta">
+      <div class="hd-tel">1544-9895<span>전국 대표번호</span></div>
+      <a href="tel:01086650531" class="btn btn-navy">전화 상담</a>
+      <button class="burger" id="burger" aria-label="메뉴 열기"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 히어로 ============ -->
+<div class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">사람찾기 및 사실관계파악 &nbsp;|&nbsp; 증거확보 전문</span>
+    <h1>당신의 실낱같은 희망이<br /><em>되겠습니다.</em></h1>
+    <p class="sub">
+      위기의 순간, 마지막까지 곁에 남는 곳.<br />
+      DH 탐정사무소는 <b>정석과 원칙</b>으로 의뢰인의 평온했던 일상을 되찾아 드립니다.<br />
+      <b>이름을 밝히지 않으셔도 상담됩니다.</b>
+    </p>
+    <div class="hero-cta">
+      <a href="tel:01086650531" class="btn btn-white"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 5c0-1 .8-2 1.8-2h2c.8 0 1.5.6 1.7 1.4l.7 2.7c.2.7-.1 1.4-.7 1.8l-1.4 1a13 13 0 006 6l1-1.4c.4-.6 1.1-.9 1.8-.7l2.7.7c.8.2 1.4.9 1.4 1.7v2c0 1-1 1.8-2 1.8A16 16 0 014 5z"/></svg>대표자 직통 상담</a>
+      <a href="#contact" class="btn btn-ghost">익명 채팅 상담</a>
+    </div>
+    <div class="trust">
+      <div><span class="dot"></span>정식 사업자 등록</div>
+      <div><span class="dot"></span>1급 탐정사</div>
+      <div><span class="dot"></span>상담·견적 무료</div>
+      <div><span class="dot"></span>즉시 보고의 원칙</div>
+      <div><span class="dot"></span>조사 자료 100% 폐기</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 혹시 이런 상황이신가요 ============ -->
+<section class="sec soft" id="signal">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label">CHECK</span>
+      <h2>혹시, 이런 상황이신가요?</h2>
+      <p>말하기 어려운 이야기일수록, 확인이 먼저입니다.</p>
+      <div class="bar"></div>
+    </div>
+
+    <ul class="signal reveal">
+      <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg></span>배우자의 귀가 시간이 갑자기 불규칙해졌습니다.</li>
+      <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg></span>휴대폰을 엎어 두거나, 들고 화장실에 갑니다.</li>
+      <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg></span>몇 년째 연락이 닿지 않는 가족이 있습니다.</li>
+      <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg></span>회사 돈이 비는데, 누구인지 알 수 없습니다.</li>
+      <li><span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg></span>누군가 나를 지켜보고 있는 것 같습니다.</li>
+    </ul>
+
+    <div class="mid-cta reveal">
+      <p>하나라도 해당되신다면, <span class="hl">확인부터 해보셔야 합니다.</span></p>
+      <a href="tel:01086650531" class="btn btn-navy">대표자에게 바로 물어보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 인사말 ============ -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label">GREETING</span>
+      <h2>인사말</h2>
+      <div class="bar"></div>
+    </div>
+
+    <div class="about reveal">
+      <div class="col-photo">
+        <div class="card-photo">
+          <!-- TODO: images/ceo.jpg (대표자 사진) -->
+          <div class="ph tall"><b>대표자 사진</b>images/ceo.jpg</div>
+        </div>
+        <div class="facts">
+          <div class="fact"><b>정식 사업자 등록</b><span>1급 탐정사</span></div>
+          <div class="fact"><b>세금계산서 발행</b><span>현금영수증 발행 가능</span></div>
+          <div class="fact"><b>자료 100% 폐기</b><span>조사 종료 후 전량 폐기</span></div>
+        </div>
+      </div>
+
+      <div>
+        <h3>안녕하십니까.<br />
+          <span class="hl">사람찾기 및 사실관계파악 | 증거확보 전문</span><br />
+          DH 탐정사무소의 홈페이지에 방문해주셔서 진심으로 감사드립니다.</h3>
+
+        <p>그동안 각종 피해와 상처를 입으신 피해자분들을 만나게 되면서</p>
+
+        <div class="quote">
+          “탐정사무소라는 곳은 단순히 타인의 의뢰를 받는 회사가 아닌,<br />
+          위기에서 가장 마지막의 <span class="hl">실낱같은 희망</span>이 되어줄 수 있는 곳”
+        </div>
+
+        <p>이라 마음 깊이 느끼게 되었습니다.</p>
+
+        <p>또한 무엇을 가장 우려하시면서 믿고 의뢰할 만한 탐정 업체를 선정하시는지,
+          그 간절한 마음을 누구보다 잘 알고 이해하고 있습니다.</p>
+
+        <p>DH 탐정사무소는 오랜 기간 쌓아온 풍부한 경험과 노하우, 전문성을 기반으로
+          <span class="hl">“하늘을 우러러 한 점의 부끄러움도 없도록”</span>
+          어려움을 함께 극복하는 데 모든 역량을 다할 것이며,
+          하루라도 빨리 기존의 평온했던 일상생활로 돌아가실 수 있도록 최선을 다해 돕는 것이야말로
+          <span class="hl">“의뢰인에 대한 유일한 보답의 길”</span>이라 여기고 실천할 것을 약속드립니다.</p>
+
+        <div class="sign">DH 탐정사무소 대표<b>[대표자 성함]</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 왜 DH인가 (8가지) ============ -->
+<section class="sec soft" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label">WHY DH</span>
+      <h2>DH 탐정사무소를 선택하는 이유</h2>
+      <p>의뢰인이 가장 걱정하시는 부분을, 여덟 가지 원칙으로 약속드립니다.</p>
+      <div class="bar"></div>
+    </div>
+
+    <div class="why">
+      <div class="why-item reveal">
+        <div class="why-no">1</div>
+        <h4>정식 사업자 등록 · 1급 탐정사</h4>
+        <p>세금계산서, 현금영수증 발행이 가능한 정식 등록 업체입니다.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-no">2</div>
+        <h4>특약사항을 포함한 상세한 계약서</h4>
+        <p>의뢰인의 심리적 부담을 덜고, 고객 보안을 한층 강화합니다.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-no">3</div>
+        <h4>현장조사 동행 서비스</h4>
+        <p>원하시는 경우 의뢰인이 현장조사에 직접 동행하실 수 있습니다.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-no">4</div>
+        <h4>즉시 보고의 원칙</h4>
+        <p>조사기간 중 <span class="hl">연락 끊김 없이 수시로 소통</span>합니다. 대상자의 이동이나 타인과의 만남 등 이슈가 발생하면 즉시 보고드립니다.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-no">5</div>
+        <h4>납득 가능한 합리적 의뢰비용</h4>
+        <p>비용이 높다고 기대한 결과가 나오지는 않습니다. 비용의 차이가 곧 업체의 능력이나 서비스 수준은 아닙니다.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-no">6</div>
+        <h4>게으른 꼼수가 아닌 정석</h4>
+        <p>단 한 번의 작은 실수로도 의뢰인에게 큰 피해를 끼칠 수 있는 것이 탐정 업무입니다. <span class="hl">꼼수보다 정석이 정답</span>입니다.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-no">7</div>
+        <h4>경험으로 다져진 노하우와 전문성</h4>
+        <p>오랜 현장조사 경험은 판단 미스를 줄이고, 예상치 못한 상황에서 즉각 대응하는 힘이 됩니다.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-no">8</div>
+        <h4>사건에 따른 명확한 해법 제시</h4>
+        <p>“무조건 된다”는 막무가내식 주장이 아닌, 명확한 해법을 제시하여 신뢰 관계를 형성합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 주요 업무 ============ -->
+<section class="sec" id="service">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label">SERVICE</span>
+      <h2>주요 업무</h2>
+      <p>아래에 없는 사안도 괜찮습니다. 먼저 편하게 문의해 주세요.</p>
+      <div class="bar"></div>
+    </div>
+
+    <div class="grid3">
+      <div class="svc reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 4l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><path d="M9.5 21v-6h5v6"/></svg></div>
+        <h4>개인 및 가정문제</h4>
+        <ul>
+          <li>각종 민·형사 사건에 대한 사실관계 파악 및 증거확보</li>
+          <li>배우자 부정행위 — <span class="hl">실제 소송에서 활용 가능한 객관적 증거수집</span></li>
+          <li>혼인을 앞둔 예비 배우자의 자격 검증</li>
+          <li>기타 누구에게도 말 못할 여러 가지 고민 해결</li>
+        </ul>
+      </div>
+
+      <div class="svc reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="10" height="18" rx="1.5"/><path d="M14 8h5a1 1 0 011 1v12"/><path d="M7 7h4M7 11h4M7 15h4M17 12h1M17 16h1"/></svg></div>
+        <h4>기업문제</h4>
+        <ul>
+          <li>공금횡령, 기밀 유출 등 산업스파이 색출</li>
+          <li>기업 내 부정·부패·비리 조사</li>
+          <li>지적 재산권 침해</li>
+        </ul>
+      </div>
+
+      <div class="svc reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/><path d="M10.5 7.5v6M8.8 9.2h3.4M8.8 11.8h3.4"/></svg></div>
+        <h4>재산조사 · 추적</h4>
+        <ul>
+          <li>채무자의 은닉재산 추적</li>
+          <li>법이 허용하는 범위 내에서만 진행합니다</li>
+        </ul>
+      </div>
+
+      <div class="svc reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="2.5"/><path d="M8.5 9.5a5 5 0 000 7M15.5 9.5a5 5 0 010 7"/><path d="M5.5 6.5a9 9 0 000 13M18.5 6.5a9 9 0 010 13"/></svg></div>
+        <h4>불법 도청 · 위치추적 장비 탐지</h4>
+        <ul>
+          <li>자택, 사무실, 차량 등에 설치된 도청기·녹음기</li>
+          <li>몰래카메라, 위치추적기 등 <span class="hl">불법 장비 탐지</span></li>
+        </ul>
+      </div>
+
+      <div class="svc reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7.5" ry="3"/><path d="M4.5 6v12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6"/><path d="M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3"/></svg></div>
+        <h4>데이터 복구</h4>
+        <ul>
+          <li>하드디스크, 휴대폰, 블랙박스 등</li>
+          <li>손실된 데이터 저장장치 복구</li>
+        </ul>
+      </div>
+
+      <div class="svc reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.4 8.2-8 9-4.6-.8-8-4-8-9V7l8-4z"/><path d="M12 9v4M12 16h.01"/></svg></div>
+        <h4>RISK 관리</h4>
+        <ul>
+          <li>잠재적 위험 요소를 미연에 파악</li>
+          <li>충분한 대비로 <span class="hl">의뢰인의 안전 보장</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 이것만은 하지 마세요 ============ -->
+<section class="sec dark" id="warning">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label">CAUTION</span>
+      <h2>확인하기 전에, 이것만은 하지 마세요</h2>
+      <p>증거는 한 번 망가지면 되돌릴 수 없습니다.</p>
+      <div class="bar"></div>
+    </div>
+
+    <div class="warn-grid">
+      <div class="warn-item reveal">
+        <div class="warn-x">✕</div>
+        <div>
+          <h4>직접 추궁하지 마세요</h4>
+          <p>상대가 경계하는 순간, 증거 확보 난이도는 몇 배로 올라갑니다. 확인이 끝난 뒤에 이야기해도 늦지 않습니다.</p>
+        </div>
+      </div>
+      <div class="warn-item reveal">
+        <div class="warn-x">✕</div>
+        <div>
+          <h4>배우자의 휴대폰을 몰래 보지 마세요</h4>
+          <p>그렇게 얻은 자료는 소송에서 쓰기 어려울 뿐 아니라, 오히려 본인이 처벌 대상이 될 수 있습니다.</p>
+        </div>
+      </div>
+      <div class="warn-item reveal">
+        <div class="warn-x">✕</div>
+        <div>
+          <h4>위치추적기를 직접 달지 마세요</h4>
+          <p>같은 이유입니다. 확인하려다 오히려 본인이 불리해지는 가장 흔한 경우입니다.</p>
+        </div>
+      </div>
+      <div class="warn-item reveal">
+        <div class="warn-x">✕</div>
+        <div>
+          <h4>혼자 미행하지 마세요</h4>
+          <p>들킬 위험이 크고, 감정이 앞선 상태에서는 본인이 위험해질 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="warn-cta reveal">
+      <p>지금 위 상황 중 하나라도 하려던 참이라면,<br /><b>움직이기 전에 먼저 전화 주세요.</b></p>
+      <a href="tel:01086650531" class="btn btn-white">대표자 직통 010-8665-0531</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 업무 절차 ============ -->
+<section class="sec soft" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label">PROCESS</span>
+      <h2>업무 절차</h2>
+      <p>상담부터 자료 폐기까지, 모든 과정을 투명하게 안내드립니다.</p>
+      <div class="bar"></div>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="no">1</div><h4>전화 및 대면상담</h4>
+        <p>사건과 의뢰인이 처한 상황에 따른 명확한 해법을 제시하고, 해결 가능성을 판단해 드립니다.</p>
+      </div>
+      <div class="step reveal">
+        <div class="no">2</div><h4>사건 의뢰 및 수임계약서 작성</h4>
+        <p>의뢰인이 요청한 특약사항과 의뢰비용, 조사기간, 조사방법 등을 기재하여 계약서를 작성합니다.</p>
+      </div>
+      <div class="step reveal">
+        <div class="no">3</div><h4>조사팀 구성 및 업무 착수</h4>
+        <p>조사팀 구성과 현장 사전 답사를 실시한 후 본격적으로 업무에 착수합니다.</p>
+      </div>
+      <div class="step reveal">
+        <div class="no">4</div><h4>조사 중 실시간 중간 보고</h4>
+        <p>상황의 변화, 변수의 발생, 대상자의 이동, 타인과의 만남 등 이슈가 발생하는 즉시 보고하고 소통합니다.</p>
+      </div>
+      <div class="step reveal">
+        <div class="no">5</div><h4>조사 완료 및 결과물 전달</h4>
+        <p>결과물을 의뢰인과 함께 확인한 후 서면, 저장장치(USB) 등을 통해 전달드립니다.</p>
+      </div>
+      <div class="step final reveal">
+        <div class="no">6</div><h4>자료 폐기</h4>
+        <p>조사 과정에서 발생한 <span class="hl">모든 자료를 100% 폐기</span>합니다. 의뢰 내용은 사무소에 남지 않습니다.</p>
+      </div>
+    </div>
+
+    <div class="sec-head reveal" style="margin:80px 0 40px">
+      <span class="sec-label">OFFICE</span>
+      <h2>사무소 둘러보기</h2>
+      <div class="bar"></div>
+    </div>
+    <div class="office reveal">
+      <figure><img src="images/office-front.jpg" alt="DH 탐정사무소 사무실 입구" width="1200" height="900" loading="lazy" /><figcaption>사무실 입구</figcaption></figure>
+      <figure><img src="images/office-work.jpg" alt="DH 탐정사무소 직원 업무실" width="1200" height="900" loading="lazy" /><figcaption>직원 업무실</figcaption></figure>
+      <figure><img src="images/office-consult.jpg" alt="DH 탐정사무소 상담실" width="1200" height="900" loading="lazy" /><figcaption>상담실</figcaption></figure>
+      <figure><img src="images/office-meeting.jpg" alt="DH 탐정사무소 회의실" width="1200" height="900" loading="lazy" /><figcaption>회의실</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 해결 사례 ============ -->
+<section class="sec" id="case">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label">CASE</span>
+      <h2>해결 사례</h2>
+      <p>의뢰인 보호를 위해 모든 사례는 각색·비식별 처리했습니다.</p>
+      <div class="bar"></div>
+    </div>
+
+    <div class="cases">
+      <div class="case reveal">
+        <div class="body">
+          <span class="tag">사람찾기</span>
+          <h4>오랜 기간 연락이 끊겼던 가족의 소재를 확인한 사례</h4>
+          <p>[사례 내용 자리 — 의뢰 상황 / 진행 과정 / 결과 3줄 정도로 정리합니다.]</p>
+          <div class="meta">소요 기간 [○일] · 지역 [○○]</div>
+        </div>
+      </div>
+      <div class="case reveal">
+        <div class="body">
+          <span class="tag">배우자 부정행위</span>
+          <h4>소송에서 활용 가능한 객관적 증거를 확보한 사례</h4>
+          <p>[사례 내용 자리]</p>
+          <div class="meta">소요 기간 [○일] · 지역 [○○]</div>
+        </div>
+      </div>
+      <div class="case reveal">
+        <div class="body">
+          <span class="tag">[분류]</span>
+          <h4>[사례 제목 자리]</h4>
+          <p>[사례 내용 자리]</p>
+          <div class="meta">소요 기간 [○일] · 지역 [○○]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 자주 묻는 질문 ============ -->
+<section class="sec soft" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label">FAQ</span>
+      <h2>자주 묻는 질문</h2>
+      <p>전화하기 전에 가장 많이 궁금해하시는 것들입니다.</p>
+      <div class="bar"></div>
+    </div>
+
+    <div class="faq reveal">
+      <details open>
+        <summary>상담하면 제 신원이 남나요?</summary>
+        <div class="a">아닙니다. 텔레그램·카카오톡 익명 채팅으로 <span class="hl">이름을 밝히지 않고</span> 상담하실 수 있습니다. 상담만 받고 의뢰하지 않으셔도 괜찮습니다.</div>
+      </details>
+
+      <details>
+        <summary>비용은 얼마나 드나요?</summary>
+        <div class="a">사안·기간·지역에 따라 달라 정해진 가격표는 없습니다. 다만 <span class="hl">상담과 견적은 무료</span>이며, 계약 전에 총 비용을 서면으로 확정합니다. 진행 중에 추가 비용을 요구하지 않습니다.
+          <!-- TODO: '추가 비용 요구하지 않습니다' 실제 정책 맞는지 대표님 확인 --></div>
+      </details>
+
+      <details>
+        <summary>조사가 불법은 아닌가요?</summary>
+        <div class="a">법이 허용하는 범위 안에서만 진행합니다. 법적으로 불가능한 의뢰라면 상담 단계에서 솔직하게 말씀드립니다.</div>
+      </details>
+
+      <details>
+        <summary>결과가 안 나오면 어떻게 되나요?</summary>
+        <div class="a">저희는 “무조건 된다”고 말씀드리지 않습니다. 상담에서 해결 가능성을 먼저 판단해 드리고, <span class="hl">어려운 사안은 어렵다고 말씀드립니다.</span></div>
+      </details>
+
+      <details>
+        <summary>조사 기간은 얼마나 걸리나요?</summary>
+        <div class="a">사안에 따라 다르지만, 계약서에 조사기간을 명시하고 그 안에서 진행합니다. 예상 기간은 상담 단계에서 안내드립니다.
+          <!-- TODO: 평균 기간(예: 3일~2주) 확인되면 문장에 추가 --></div>
+      </details>
+
+      <details>
+        <summary>의뢰한 내용이 나중에 유출되지 않을까요?</summary>
+        <div class="a">조사 종료 후 <span class="hl">모든 자료를 100% 폐기</span>합니다. 사무소에 기록이 남지 않습니다.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 상담 문의 ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label">CONTACT</span>
+      <h2>상담은 무료이며, 비밀은 지켜집니다</h2>
+      <p>편하신 방법으로 연락 주세요. 익명 상담도 가능합니다.</p>
+      <div class="bar"></div>
+    </div>
+
+    <p class="urgent reveal">
+      CCTV 영상은 일정 기간이 지나면 자동으로 삭제됩니다.<br />
+      <b>지금 남아 있는 기록이, 다음 주에는 없을 수 있습니다.</b>
+    </p>
+
+    <div class="ct-grid">
+      <a href="tel:15449895" class="ct reveal">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M4 5c0-1 .8-2 1.8-2h2c.8 0 1.5.6 1.7 1.4l.7 2.7c.2.7-.1 1.4-.7 1.8l-1.4 1a13 13 0 006 6l1-1.4c.4-.6 1.1-.9 1.8-.7l2.7.7c.8.2 1.4.9 1.4 1.7v2c0 1-1 1.8-2 1.8A16 16 0 014 5z"/></svg></div>
+        <span>전국 대표번호</span><b>1544-9895</b>
+      </a>
+
+      <a href="tel:01086650531" class="ct reveal">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></div>
+        <span>대표자 직통</span><b>010-8665-0531</b><em>24시간 언제든지</em>
+      </a>
+
+      <!-- TODO: 오픈채팅방 링크 받으면 href 교체 후 data-todo 삭제 -->
+      <a href="#" class="ct reveal" data-todo="1">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M12 4c4.6 0 8 2.8 8 6.3 0 3.4-3.4 6.2-8 6.2-.7 0-1.4-.1-2-.2L6 19l.8-3A6.7 6.7 0 014 10.3C4 6.8 7.4 4 12 4z"/></svg></div>
+        <span>카카오톡</span><b>1:1 익명 채팅</b><em>링크 준비 중</em>
+      </a>
+
+      <a href="https://t.me/dhda1" target="_blank" rel="noopener" class="ct reveal">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"><path d="M21 4L3 11l5 2 2 6 3-4 5 3z"/></svg></div>
+        <span>텔레그램</span><b>@dhda1</b><em>완전 익명 상담</em>
+      </a>
+    </div>
+
+    <p class="notice reveal">
+      상담 내용과 의뢰인의 신원은 <b>어떤 경우에도 외부에 공개되지 않으며</b>,
+      조사 종료 후 모든 자료는 <b>100% 폐기</b>됩니다.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap ft">
+    <div>
+      <b>DH 탐정사무소</b>
+      <p>“당신의 실낱같은 희망이 되겠습니다”</p>
+      <p>대표 [성함] · 사업자등록번호 [번호]</p>
+      <p>주소 [사무실 주소]</p>
+    </div>
+    <div>
+      <b>상담 안내</b>
+      <p>전국 대표번호 1544-9895</p>
+      <p>대표자 직통 010-8665-0531</p>
+      <p>텔레그램 @dhda1</p>
+    </div>
+    <div>
+      <b>안내</b>
+      <p>본 사무소는 법이 허용하는 범위 내에서만 조사를 진행합니다.</p>
+      <p>© 2026 DH Detective Agency.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- 모바일 하단 고정 바 -->
+<div class="mobar">
+  <a href="tel:01086650531" class="main"><span class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 5c0-1 .8-2 1.8-2h2c.8 0 1.5.6 1.7 1.4l.7 2.7c.2.7-.1 1.4-.7 1.8l-1.4 1a13 13 0 006 6l1-1.4c.4-.6 1.1-.9 1.8-.7l2.7.7c.8.2 1.4.9 1.4 1.7v2c0 1-1 1.8-2 1.8A16 16 0 014 5z"/></svg></span>전화 상담</a>
+  <a href="#" data-todo="1"><span class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 4c4.6 0 8 2.8 8 6.3 0 3.4-3.4 6.2-8 6.2-.7 0-1.4-.1-2-.2L6 19l.8-3A6.7 6.7 0 014 10.3C4 6.8 7.4 4 12 4z"/></svg></span>카톡 상담</a>
+  <a href="https://t.me/dhda1" target="_blank" rel="noopener"><span class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 4L3 11l5 2 2 6 3-4 5 3z"/></svg></span>텔레그램</a>
+</div>
+
+<script>
+// 헤더 그림자 + 상단 탭 현재 위치 표시
+var hd = document.getElementById('hd');
+var tabs = document.getElementById('tabs');
+var links = [].slice.call(tabs.querySelectorAll('a'));
+var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+
+function onScroll() {
+  hd.classList.toggle('scrolled', window.scrollY > 10);
+  var head = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--head'), 10) || 74;
+  var y = window.scrollY + head + 40;
+  var cur = -1;
+  secs.forEach(function (s, i) { if (s && s.offsetTop <= y) cur = i; });
+  links.forEach(function (a, i) { a.classList.toggle('active', i === cur); });
+}
+addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// 모바일 메뉴
+document.getElementById('burger').onclick = function () { tabs.classList.toggle('open'); };
+tabs.onclick = function (e) { if (e.target.tagName === 'A') tabs.classList.remove('open'); };
+
+// 스크롤 등장 효과
+var io = new IntersectionObserver(function (es) {
+  es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+// 카톡 링크 도착 전 임시 안내
+document.querySelectorAll('[data-todo]').forEach(function (el) {
+  el.onclick = function (ev) { ev.preventDefault(); alert('오픈채팅방 링크 준비 중입니다. 대표자 직통 010-8665-0531로 연락 주세요.'); };
+});
+</script>
+</body>
+</html>
