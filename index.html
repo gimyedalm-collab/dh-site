@@ -409,12 +409,28 @@
       }
       .hero-photo {
         position: relative;
-        max-width: 372px;
+        max-width: 400px;
         margin-left: auto;
-        border-radius: 20px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+        margin-bottom: -92px;
+      }
+      .hero-photo::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 8%;
+        width: 108%;
+        height: 88%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background: radial-gradient(
+          closest-side,
+          rgba(120, 175, 230, 0.34),
+          transparent 72%
+        );
+      }
+      .hero-photo img {
+        position: relative;
+        filter: drop-shadow(0 26px 46px rgba(0, 0, 0, 0.5));
       }
       .hero-photo img {
         width: 100%;
@@ -438,6 +454,8 @@
         color: #b9cadd;
       }
       .trust {
+        position: relative;
+        z-index: 2;
         display: flex;
         gap: 22px;
         flex-wrap: wrap;
@@ -628,6 +646,79 @@
         font-size: 15px;
         color: var(--muted);
         line-height: 1.65;
+      }
+
+      /* ---------- 여성 조사관 ---------- */
+      .female {
+        margin-top: 20px;
+        border-radius: var(--r);
+        padding: 44px 48px;
+        color: #fff;
+        background:
+          radial-gradient(
+            620px 300px at 88% 0%,
+            rgba(194, 161, 91, 0.22),
+            transparent 62%
+          ),
+          linear-gradient(125deg, #0b2545 0%, #163c68 100%);
+      }
+      .female-head {
+        max-width: 640px;
+      }
+      .female-label {
+        display: block;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        color: var(--gold);
+        margin-bottom: 12px;
+      }
+      .female-head h3 {
+        font-size: clamp(22px, 2.6vw, 29px);
+        font-weight: 800;
+        letter-spacing: -0.7px;
+        margin-bottom: 12px;
+      }
+      .female-head p {
+        font-size: 16.5px;
+        color: #c7d6e6;
+        line-height: 1.7;
+      }
+      .female-head p b {
+        color: #fff;
+      }
+      .female-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 34px;
+        padding-top: 32px;
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+      }
+      .fm b {
+        display: block;
+        font-size: 16.5px;
+        font-weight: 800;
+        margin-bottom: 9px;
+        padding-left: 15px;
+        position: relative;
+      }
+      .fm b::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--gold);
+      }
+      .fm span {
+        display: block;
+        padding-left: 15px;
+        font-size: 14.5px;
+        color: #b9cadd;
+        line-height: 1.7;
       }
 
       /* ---------- 주요 업무 ---------- */
@@ -1268,16 +1359,22 @@
           max-width: 100%;
           margin: 0;
         }
-        .hero-photo img {
-          height: 264px;
-          object-fit: cover;
-          object-position: 50% 16%;
+        .hero-photo {
+          max-width: 300px;
+          margin: 0 auto -60px;
         }
         .about {
           grid-template-columns: 1fr;
         }
       }
       @media (max-width: 1100px) {
+        .female-grid {
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+        .female {
+          padding: 34px 26px;
+        }
         .why {
           grid-template-columns: repeat(2, 1fr);
         }
@@ -1466,19 +1563,17 @@
           </div>
           <div class="hero-photo">
             <img
-              src="images/ceo.jpg"
+              src="images/ceo-cut.webp"
               alt="DH 탐정사무소 대표 신대현"
               width="900"
               height="1200"
               fetchpriority="high"
             />
-            <div class="hero-photo-cap">
-              <b>대표 신대현</b><span>DH 탐정사무소</span>
-            </div>
           </div>
         </div>
 
         <div class="trust">
+          <div><span class="dot"></span>여성 조사관 보유</div>
           <div><span class="dot"></span>고양·일산 사무소 · 전국 출동</div>
           <div><span class="dot"></span>정식 사업자 등록</div>
           <div><span class="dot"></span>1급 탐정사</div>
@@ -1659,7 +1754,6 @@
         </div>
 
         <div class="about reveal">
-
           <div>
             <h3>
               안녕하십니까.<br />
@@ -1838,6 +1932,40 @@
               “무조건 된다”는 막무가내식 주장이 아닌, 명확한 해법을 제시하여
               신뢰 관계를 형성합니다.
             </p>
+          </div>
+        </div>
+
+        <div class="female reveal">
+          <div class="female-head">
+            <span class="female-label">FEMALE INVESTIGATOR</span>
+            <h3>여성 조사관이 함께합니다</h3>
+            <p>
+              말 꺼내기 어려운 이야기라면, 처음부터
+              <b>여성 조사관에게 상담하셔도 됩니다.</b>
+            </p>
+          </div>
+          <div class="female-grid">
+            <div class="fm">
+              <b>말하기가 편해집니다</b>
+              <span>
+                가정 문제, 스토킹, 성적 피해는 남성 조사관에게 설명하기
+                불편하실 수 있습니다. 상담부터 여성 조사관이 맡을 수 있습니다.
+              </span>
+            </div>
+            <div class="fm">
+              <b>남성이 못 들어가는 곳에 들어갑니다</b>
+              <span>
+                여성 전용 시설, 병원, 미용실처럼 남성 조사관이 들어서는 순간
+                기억에 남는 장소가 있습니다. 조사 범위가 달라집니다.
+              </span>
+            </div>
+            <div class="fm">
+              <b>남녀 2인 1조는 눈에 띄지 않습니다</b>
+              <span>
+                카페나 거리에 혼자 앉은 남성은 기억에 남지만, 두 사람이 함께
+                있으면 시선을 끌지 않습니다. 미행·잠복의 성패가 갈립니다.
+              </span>
+            </div>
           </div>
         </div>
       </div>
