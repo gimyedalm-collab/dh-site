@@ -409,12 +409,28 @@
       }
       .hero-photo {
         position: relative;
-        max-width: 372px;
+        max-width: 400px;
         margin-left: auto;
-        border-radius: 20px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+        margin-bottom: -92px;
+      }
+      .hero-photo::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 8%;
+        width: 108%;
+        height: 88%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background: radial-gradient(
+          closest-side,
+          rgba(120, 175, 230, 0.34),
+          transparent 72%
+        );
+      }
+      .hero-photo img {
+        position: relative;
+        filter: drop-shadow(0 26px 46px rgba(0, 0, 0, 0.5));
       }
       .hero-photo img {
         width: 100%;
@@ -438,6 +454,8 @@
         color: #b9cadd;
       }
       .trust {
+        position: relative;
+        z-index: 2;
         display: flex;
         gap: 22px;
         flex-wrap: wrap;
@@ -1268,10 +1286,9 @@
           max-width: 100%;
           margin: 0;
         }
-        .hero-photo img {
-          height: 264px;
-          object-fit: cover;
-          object-position: 50% 16%;
+        .hero-photo {
+          max-width: 300px;
+          margin: 0 auto -60px;
         }
         .about {
           grid-template-columns: 1fr;
@@ -1466,15 +1483,12 @@
           </div>
           <div class="hero-photo">
             <img
-              src="images/ceo.jpg"
+              src="images/ceo-cut.webp"
               alt="DH 탐정사무소 대표 신대현"
               width="900"
               height="1200"
               fetchpriority="high"
             />
-            <div class="hero-photo-cap">
-              <b>대표 신대현</b><span>DH 탐정사무소</span>
-            </div>
           </div>
         </div>
 
