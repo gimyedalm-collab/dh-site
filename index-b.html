@@ -861,6 +861,7 @@
         gap: 22px;
       }
       .case {
+        display: flex;
         background: #fff;
         border: 1px solid var(--line);
         border-radius: var(--r);
@@ -875,10 +876,14 @@
         box-shadow: 0 18px 44px rgba(11, 37, 69, 0.13);
       }
       .case .body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
         padding: 28px;
       }
       .case .tag {
         display: inline-block;
+        align-self: flex-start;
         font-size: 12.5px;
         font-weight: 700;
         color: var(--accent);
@@ -897,6 +902,7 @@
       .case p {
         font-size: 15px;
         color: var(--muted);
+        margin-bottom: 18px;
       }
       .case p b {
         color: var(--navy);
@@ -906,11 +912,11 @@
         color: var(--navy);
       }
       .case .meta {
-        margin-top: 18px;
+        margin-top: auto;
         padding-top: 16px;
         border-top: 1px dashed var(--line);
         font-size: 13.5px;
-        color: #7c8b9a;
+        color: #687787;
       }
 
       /* ---------- 사무소 둘러보기 ---------- */
@@ -2400,7 +2406,12 @@
             <span>대표자 직통</span><b>010-8665-0531</b><em>24시간 언제든지</em>
           </a>
 
-          <a href="https://open.kakao.com/me/dhda" target="_blank" rel="noopener" class="ct reveal">
+          <a
+            href="https://open.kakao.com/me/dhda"
+            target="_blank"
+            rel="noopener"
+            class="ct reveal"
+          >
             <div class="ico">
               <svg
                 width="22"
@@ -2591,7 +2602,6 @@
       document.querySelectorAll('.reveal').forEach(function (el) {
         io.observe(el);
       });
-
     </script>
   </body>
 </html>
