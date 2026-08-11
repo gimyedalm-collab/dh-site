@@ -11,7 +11,7 @@
       content="DH 탐정사무소 — 사람찾기 및 사실관계파악, 증거확보 전문. 정식 사업자 등록 l 1급 탐정사. 즉시 보고의 원칙, 조사 자료 100% 폐기. 전국 어디든 즉시 출동. 전국 대표번호 1544-9895."
     />
 
-    <!-- TODO(자료 도착 후 교체): 대표자 사진 / 해결 사례 3건 / 카톡 오픈채팅 링크 / 1급 탐정사 자격 근거 확인 -->
+    <!-- TODO(자료 도착 후 교체): 대표자 사진 / 해결 사례 3건 / 1급 탐정사 자격 근거 확인 -->
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="DH 탐정사무소" />
@@ -2397,8 +2397,7 @@
             <span>대표자 직통</span><b>010-8665-0531</b><em>24시간 언제든지</em>
           </a>
 
-          <!-- TODO: 오픈채팅방 링크 받으면 href 교체 후 data-todo 삭제 -->
-          <a href="#" class="ct reveal" data-todo="1">
+          <a href="https://open.kakao.com/me/dhda" target="_blank" rel="noopener" class="ct reveal">
             <div class="ico">
               <svg
                 width="22"
@@ -2414,7 +2413,7 @@
                 />
               </svg>
             </div>
-            <span>카카오톡</span><b>1:1 익명 채팅</b><em>링크 준비 중</em>
+            <span>카카오톡</span><b>1:1 익명 채팅</b><em>친구추가 없이 바로</em>
           </a>
 
           <a
@@ -2461,7 +2460,7 @@
           <b>상담 안내</b>
           <p>전국 대표번호 1544-9895</p>
           <p>대표자 직통 010-8665-0531</p>
-          <p>카카오톡 1:1 익명 채팅 상단 링크 이용</p>
+          <p>카카오톡 오픈채팅 open.kakao.com/me/dhda</p>
           <p>텔레그램 사용자명 dhda1</p>
         </div>
         <div>
@@ -2490,7 +2489,7 @@
             /></svg></span
         >전화 상담</a
       >
-      <a href="#" data-todo="1"
+      <a href="https://open.kakao.com/me/dhda" target="_blank" rel="noopener"
         ><span class="ico"
           ><svg
             width="19"
@@ -2590,15 +2589,6 @@
         io.observe(el);
       });
 
-      // 카톡 링크 도착 전 임시 안내
-      document.querySelectorAll('[data-todo]').forEach(function (el) {
-        el.onclick = function (ev) {
-          ev.preventDefault();
-          alert(
-            '오픈채팅방 링크 준비 중입니다. 대표자 직통 010-8665-0531로 연락 주세요.',
-          );
-        };
-      });
     </script>
   </body>
 </html>
