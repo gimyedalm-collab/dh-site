@@ -1454,6 +1454,10 @@
         }
       }
       @media (max-width: 640px) {
+        /* PC용 줄바꿈이 모바일에선 '있으니' 같은 한 단어 줄을 만듦 */
+        .contact .sec-head h2 br {
+          display: none;
+        }
         .why {
           grid-template-columns: 1fr;
         }
